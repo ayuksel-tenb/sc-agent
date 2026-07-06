@@ -1,15 +1,34 @@
 # 🛡 SC Agent — Tenable Security Center Assistant
 
-A Chrome (MV3) extension that drops a floating **AI vulnerability-analyst** chat
-into Tenable Security Center. When you open a page whose URL matches a keyword you
-configure (e.g. `vulndetails`), a shield icon appears in the bottom-right corner.
-Click it, ask a question, and the agent answers using the vulnerability data
-scraped from the page — powered by the **Anthropic API**.
+**Turn any Tenable Security Center vulnerability page into a conversation.** SC
+Agent is a Chrome (MV3) extension that drops a floating **AI vulnerability
+analyst** into Security Center. Open a page whose URL matches a keyword you
+configure (e.g. `vulndetails`), click the shield in the corner, and ask anything
+— the agent answers using the vulnerability data scraped straight from the page,
+powered by the **Anthropic API**.
 
 <p align="center"><img src="icons/icon128.png" width="96" alt="SC Agent icon"></p>
 
+> ### ✨ Why it's different
+>
+> - 🌍 **Analyze vulnerabilities in *any* language.** Ask in English, Turkish,
+>   Spanish, Japanese — anything. The agent reads the finding and replies in the
+>   language you wrote in. No more copy-pasting CVEs into a separate translator.
+> - ⚡ **Trigger your own automation.** Define commands in `tools.md` — `triage`,
+>   `remediation`, `ticket`, or anything you invent — and the agent runs those
+>   playbooks against the live vulnerability data on the page. Ask *"open a
+>   ticket"* or *"give me the remediation script"* and get a ready-to-use answer.
+> - 🧠 **It already knows the vulnerability.** No prompting from scratch: the
+>   plugin, CVEs, CVSS, affected hosts and solution are pulled from the page and
+>   handed to the model automatically.
+
 ## Features
 
+- **Analyze in any language** — write in whatever language you like; the agent
+  grounds its answer in the on-page finding and replies in kind.
+- **Automation on demand** — `tools.md` entries turn plain-language requests
+  (*"triage this"*, *"write a ticket"*) into structured, actionable output driven
+  by the real vulnerability data.
 - **Contextual chat widget** — a small modal that expands to a large panel.
   Opens with *“How can I help?”*
 - **Page-aware** — reads the vulnerability title (from the `title` attribute of
@@ -26,6 +45,17 @@ scraped from the page — powered by the **Anthropic API**.
 - **Streaming responses** and a one-click **Test API key** button.
 - **Style-isolated** — the widget runs inside a Shadow DOM so it never clashes
   with Security Center's own React styles.
+
+## Demo
+
+See it in action — press ▶️ play:
+
+<video src="https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4" controls muted playsinline width="820"></video>
+
+If the player doesn't load in your browser, watch it directly here:
+**[▶ media/demo.mp4](https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4)**
+
+<sub>Configuring SC Agent and asking the analyst about a live finding — sped up.</sub>
 
 ## Install (load unpacked)
 
