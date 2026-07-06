@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Packaged builds
+*.zip
+sc-agent.pem
+
+# Local notes / secrets
+*.local
+.env

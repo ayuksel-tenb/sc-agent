@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SC Agent — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <header class="page-head">
+        <h1>🛡 SC Agent settings</h1>
+        <p class="muted">
+          A vulnerability-analyst assistant for Tenable Security Center.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Provider</h2>
+        <label class="field">
+          <span>Active provider</span>
+          <select id="provider">
+            <option value="anthropic">Anthropic API</option>
+          </select>
+        </label>
+        <p class="muted small">
+          The agent talks to the Anthropic Messages API directly from your browser.
+          OpenCode support is on the roadmap — see the README.
+        </p>
+      </section>
+
+      <section class="card" id="anthropic-card">
+        <h2>Anthropic API</h2>
+        <label class="field">
+          <span>API key</span>
+          <input id="anthropicApiKey" type="password" placeholder="sk-ant-…" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Model</span>
+          <input id="anthropicModel" list="model-list" placeholder="claude-opus-4-8" />
+          <datalist id="model-list">
+            <option value="claude-opus-4-8"></option>
+            <option value="claude-fable-5"></option>
+            <option value="claude-sonnet-5"></option>
+            <option value="claude-haiku-4-5"></option>
+          </datalist>
+        </label>
+        <label class="field">
+          <span>Max tokens</span>
+          <input id="maxTokens" type="number" min="256" max="128000" step="256" />
+        </label>
+        <div class="row">
+          <button id="test" class="secondary" type="button">Test API key</button>
+          <span id="test-status" class="muted small"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Security Center</h2>
+        <label class="field">
+          <span>Console URL</span>
+          <input id="consoleUrl" type="url" placeholder="https://localhost:8443/" />
+        </label>
+        <label class="field">
+          <span>Show agent when the URL contains…</span>
+          <textarea id="keywords" rows="3" placeholder="vulndetails"></textarea>
+        </label>
+        <p class="muted small">
+          One keyword per line (or comma-separated). The chat launcher appears only
+          on pages whose URL contains one of these.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>agent.md</h2>
+          <button class="link" data-reset="agentMd" type="button">Reset to default</button>
+        </div>
+        <p class="muted small">Defines who the agent is and how it should behave.</p>
+        <textarea id="agentMd" class="mono" rows="14"></textarea>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>tools.md</h2>
+          <button class="link" data-reset="toolsMd" type="button">Reset to default</button>
+        </div>
+        <p class="muted small">
+          Automation instructions the agent follows when you ask for them.
+        </p>
+        <textarea id="toolsMd" class="mono" rows="14"></textarea>
+      </section>
+
+      <div class="save-bar">
+        <button id="save" type="button">Save settings</button>
+        <span id="status" class="muted small"></span>
+      </div>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
