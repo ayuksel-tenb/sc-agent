@@ -1,4 +1,4 @@
-# 🛡 SC Agent — Tenable Security Center Assistant
+# 🛡 Tenable SC Agent — Security Center Vulnerability Analyst
 
 **Turn any Tenable Security Center vulnerability page into a conversation.** SC
 Agent is a Chrome (MV3) extension that drops a floating **AI vulnerability
