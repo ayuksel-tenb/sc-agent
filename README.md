@@ -48,14 +48,11 @@ powered by the **Anthropic API**.
 
 ## Demo
 
-See it in action — press ▶️ play:
+See it in action (the clip below loops automatically — click it for the full MP4):
 
-<video src="https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4" controls muted playsinline width="820"></video>
+[![SC Agent demo](media/demo.gif)](https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4)
 
-If the player doesn't load in your browser, watch it directly here:
-**[▶ media/demo.mp4](https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4)**
-
-<sub>Configuring SC Agent and asking the analyst about a live finding — sped up.</sub>
+<sub>Configuring SC Agent and asking the analyst about a live finding — sped up. ▶ <a href="https://github.com/ayuksel-tenb/sc-agent/raw/main/media/demo.mp4">Watch the full-resolution MP4</a>.</sub>
 
 ## Install (load unpacked)
 
