@@ -117,6 +117,15 @@ the extension runs.
 
 ## Roadmap / TODO
 
+- [ ] **Automation Workflow middleware — from conversation to Ansible.** A thin
+      middleware service that bridges the two ends: *conversation in, remediation
+      out*. One end speaks to the chat agent (the model proposes an action from a
+      `tools.md` playbook); the other end hands the structured intent to an
+      **Ansible** workflow (AWX / Ansible Automation Platform job template) that
+      actually runs it — patching, config changes, isolating a host. The
+      middleware handles auth, approval gates, and mapping the agent's output to
+      job-template variables, so *"remediate this on the affected hosts"* becomes a
+      real, auditable automation run instead of just advice.
 - [ ] **OpenCode / local-agent support** — talk to a local OpenCode agent instead
       of the Anthropic API. *Planned if the project gets enough ⭐ stars — star the
       repo if you want it!*
